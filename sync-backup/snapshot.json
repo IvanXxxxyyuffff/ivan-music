@@ -1,7 +1,7 @@
 {
  "kind": "ivan-music-sync-snapshot",
  "version": 1,
- "exportedAt": 1789809468588,
+ "exportedAt": 1789812010308,
  "users": [
   {
    "username": "ivantest10202@x.com",
@@ -165,9 +165,20 @@
        "picUrl": "https://p2.music.126.net/gtuImgLUr7JcLb8TQpuHnQ==/109951173674968479.jpg?param=500y500",
        "playId": "3414777514",
        "source": "wy"
+      },
+      {
+       "album": "看着你的笑我好像就足够",
+       "albumId": "109951173738718797",
+       "artist": "意面饭之助",
+       "durationSec": 90,
+       "id": "3420182009",
+       "name": "看着你的笑我好像就足够",
+       "picUrl": "https://p2.music.126.net/P5F4vXJsQvyeBmE9DmJkcw==/109951173738718797.jpg?param=500y500",
+       "playId": "3420182009",
+       "source": "wy"
       }
      ],
-     "updatedAt": 1789808797168,
+     "updatedAt": 1789810520934,
      "deleted": false
     }
    ]
