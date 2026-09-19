@@ -1,7 +1,7 @@
 {
  "kind": "ivan-music-sync-snapshot",
  "version": 1,
- "exportedAt": 1789807299088,
+ "exportedAt": 1789809468588,
  "users": [
   {
    "username": "ivantest10202@x.com",
@@ -133,9 +133,41 @@
        "picUrl": "https://p2.music.126.net/rTgmk8GAFEO3VZnyoloiGA==/109951173564508181.jpg?param=500y500",
        "playId": "3406970035",
        "source": "wy"
+      },
+      {
+       "album": "",
+       "albumId": "109951173796159985",
+       "artist": "黄靖轩",
+       "durationSec": 0,
+       "id": "3424124404",
+       "name": "太想爱你 (只想爱你的我)",
+       "playId": "3424124404",
+       "source": "wy"
+      },
+      {
+       "album": "연애의 조건 (Love Options)",
+       "albumId": "109951169710211584",
+       "artist": "BESTie",
+       "durationSec": 0,
+       "id": "27867073",
+       "name": "연애의 조건 (Love Options)",
+       "picUrl": "https://p2.music.126.net/6rRfz31BrRX6R3GGl_10kA==/109951169710211584.jpg?param=500y500",
+       "playId": "27867073",
+       "source": "wy"
+      },
+      {
+       "album": "",
+       "albumId": "109951173674968479",
+       "artist": "意面饭之助",
+       "durationSec": 0,
+       "id": "3414777514",
+       "name": "Never Say Good Bye (Cover Bon Jovi)",
+       "picUrl": "https://p2.music.126.net/gtuImgLUr7JcLb8TQpuHnQ==/109951173674968479.jpg?param=500y500",
+       "playId": "3414777514",
+       "source": "wy"
       }
      ],
-     "updatedAt": 1789805002101,
+     "updatedAt": 1789808797168,
      "deleted": false
     }
    ]
