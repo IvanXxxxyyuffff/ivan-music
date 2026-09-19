@@ -1,7 +1,7 @@
 {
  "kind": "ivan-music-sync-snapshot",
  "version": 1,
- "exportedAt": 1789801197089,
+ "exportedAt": 1789804781574,
  "users": [
   {
    "username": "ivantest10202@x.com",
@@ -48,6 +48,83 @@
      "name": "留存测试",
      "tracks": [],
      "updatedAt": 1700000000000,
+     "deleted": false
+    }
+   ]
+  },
+  {
+   "username": "Xiayufan",
+   "createdAt": 1789802190575,
+   "playlists": [
+    {
+     "id": "__liked__",
+     "name": "我喜欢的音乐",
+     "tracks": [
+      {
+       "album": "再见太难",
+       "albumId": "109951173693092478",
+       "artist": "利得汇",
+       "durationSec": 0,
+       "id": "3416333610",
+       "name": "再见太难",
+       "picUrl": "https://p2.music.126.net/KPtNGvc1BM-3ShqTT9nd6A==/109951173693092478.jpg?param=500y500",
+       "playId": "3416333610",
+       "source": "wy"
+      },
+      {
+       "album": "Almost Almost（差一点心动）",
+       "albumId": "109951173317614378",
+       "artist": "Hotcell",
+       "durationSec": 0,
+       "id": "3389024720",
+       "name": "Almost Almost（差一点心动）",
+       "playId": "3389024720",
+       "source": "wy"
+      },
+      {
+       "album": "",
+       "albumId": "109951173678711808",
+       "artist": "大头针 Offoioil",
+       "durationSec": 0,
+       "id": "3415137750",
+       "name": "寂寞咖啡",
+       "picUrl": "https://p2.music.126.net/9Ws1gylYqiB-vYj2E1s_8A==/109951173678711808.jpg?param=500y500",
+       "playId": "3415137750",
+       "source": "wy"
+      },
+      {
+       "album": "Money Much(钞级夏天)",
+       "albumId": "109951173326718847",
+       "artist": "苏晚星",
+       "durationSec": 0,
+       "id": "3389826102",
+       "name": "Money Much(钞级夏天)",
+       "picUrl": "https://p2.music.126.net/ycEaPEWOq_MnENbCfzTXAw==/109951173326718847.jpg?param=500y500",
+       "playId": "3389826102",
+       "source": "wy"
+      },
+      {
+       "album": "你想要的（追光灯下的我们在共舞）",
+       "albumId": "109951173746705319",
+       "artist": "池袋西口",
+       "durationSec": 0,
+       "id": "3420816497",
+       "name": "你想要的（追光灯下的我们在共舞）",
+       "playId": "3420816497",
+       "source": "wy"
+      },
+      {
+       "album": "你想要的",
+       "albumId": "109951173869973019",
+       "artist": "DJ阿乐",
+       "durationSec": 0,
+       "id": "3429793959",
+       "name": "你想要的",
+       "playId": "3429793959",
+       "source": "wy"
+      }
+     ],
+     "updatedAt": 1789801991078,
      "deleted": false
     }
    ]
