@@ -1,0 +1,56 @@
+{
+ "kind": "ivan-music-sync-snapshot",
+ "version": 1,
+ "exportedAt": 1789801037696,
+ "users": [
+  {
+   "username": "ivantest10202@x.com",
+   "createdAt": 1789795476626,
+   "playlists": []
+  },
+  {
+   "username": "ivantest4265@x.com",
+   "createdAt": 1789795512989,
+   "playlists": [
+    {
+     "id": "p1",
+     "name": "改名了",
+     "tracks": [
+      {
+       "id": "1",
+       "source": "wy",
+       "name": "歌"
+      }
+     ],
+     "updatedAt": 1800000000000,
+     "deleted": false
+    },
+    {
+     "id": "p2",
+     "name": "已删除",
+     "tracks": [],
+     "updatedAt": 1800000000001,
+     "deleted": true
+    }
+   ]
+  },
+  {
+   "username": "ivan@x.com",
+   "createdAt": 1789798068710,
+   "playlists": []
+  },
+  {
+   "username": "fan3085210919",
+   "createdAt": 1789798697598,
+   "playlists": [
+    {
+     "id": "keep1",
+     "name": "留存测试",
+     "tracks": [],
+     "updatedAt": 1700000000000,
+     "deleted": false
+    }
+   ]
+  }
+ ]
+}
