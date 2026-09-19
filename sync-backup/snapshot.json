@@ -1,7 +1,7 @@
 {
  "kind": "ivan-music-sync-snapshot",
  "version": 1,
- "exportedAt": 1789804781574,
+ "exportedAt": 1789805789598,
  "users": [
   {
    "username": "ivantest10202@x.com",
@@ -122,9 +122,20 @@
        "name": "你想要的",
        "playId": "3429793959",
        "source": "wy"
+      },
+      {
+       "album": "恋爱的条件",
+       "albumId": "109951173564508181",
+       "artist": "凌晨四点半",
+       "durationSec": 176,
+       "id": "3406970035",
+       "name": "恋爱的条件",
+       "picUrl": "https://p2.music.126.net/rTgmk8GAFEO3VZnyoloiGA==/109951173564508181.jpg?param=500y500",
+       "playId": "3406970035",
+       "source": "wy"
       }
      ],
-     "updatedAt": 1789801991078,
+     "updatedAt": 1789805002101,
      "deleted": false
     }
    ]
