@@ -1,0 +1,24 @@
+{
+  "rev": 1,
+  "updated": "2026-10-08",
+  "note": "Ivan Music 云端调参。改完直接生效，不用发版。rev 必须递增（小于等于已生效值的会被忽略）。字段缺省 = 保持出厂行为。",
+
+  "nodes": [
+    { "id": "qj", "base": "https://api.qijieya.cn/meting/", "chart": true, "search": true },
+    { "id": "m2", "base": "https://api.injahow.cn/meting/", "chart": true },
+    { "id": "m3", "base": "https://api.moeyao.cn/meting/" },
+    { "id": "e0", "base": "https://music.3e0.cn/" }
+  ],
+
+  "gdSources": ["netease"],
+  "metingServers": ["netease"],
+
+  "specialBeforeCross": true,
+  "crossArtistGuard": true,
+
+  "searchTxFirst": true,
+  "searchRankByArtist": true,
+
+  "singerCard": true,
+  "singerCardMinHits": 2
+}
