@@ -1,7 +1,7 @@
 {
-  "rev": 1,
+  "rev": 2,
   "updated": "2026-10-08",
-  "note": "Ivan Music 云端调参。改完直接生效，不用发版。rev 必须递增（小于等于已生效值的会被忽略）。字段缺省 = 保持出厂行为。",
+  "note": "Ivan Music 云端调参。改完直接生效，不用发版。rev 必须递增（小于等于已生效值的会被忽略）。字段缺省 = 保持出厂行为。注意：明文 http 的主机必须在 APK 的明文名单里（res/xml/network_security_config.xml），所以换域名优先用 https。",
 
   "nodes": [
     { "id": "qj", "base": "https://api.qijieya.cn/meting/", "chart": true, "search": true },
@@ -20,5 +20,16 @@
   "searchRankByArtist": true,
 
   "singerCard": true,
-  "singerCardMinHits": 2
+  "singerCardMinHits": 2,
+
+  "gdBase": "https://music-api.gdstudio.xyz/api.php",
+
+  "special": {
+    "s01s": "https://tang.api.s01s.cn/music_open_api.php",
+    "cyapi": "https://cyapi.top/API/qq_music.php",
+    "cyapiKey": "1ffdf5733f5d538760e63d7e46ba17438d9f7b9dfc18c51be1109386fd74c3a1",
+    "kg": "http://103.79.184.97/api/music/url",
+    "kgKey": "6C1F-53W0-GRKI-EVFG",
+    "haitangw": "https://musicserver.haitangw.cc/v1/music/resolve-url"
+  }
 }
