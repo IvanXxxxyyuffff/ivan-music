@@ -1,5 +1,5 @@
 {
-  "rev": 2,
+  "rev": 3,
   "updated": "2026-10-08",
   "note": "Ivan Music 云端调参。改完直接生效，不用发版。rev 必须递增（小于等于已生效值的会被忽略）。字段缺省 = 保持出厂行为。注意：明文 http 的主机必须在 APK 的明文名单里（res/xml/network_security_config.xml），所以换域名优先用 https。",
 
@@ -23,6 +23,8 @@
   "singerCardMinHits": 2,
 
   "gdBase": "https://music-api.gdstudio.xyz/api.php",
+
+  "cacheGen": 2,
 
   "special": {
     "s01s": "https://tang.api.s01s.cn/music_open_api.php",
