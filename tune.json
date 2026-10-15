@@ -1,39 +1,91 @@
 {
-  "rev": 6,
-  "updated": "2026-10-15",
+  "rev": 7,
+  "updated": "2026-10-16",
   "note": "Ivan Music 云端调参。改完直接生效，不用发版。rev 必须递增（小于等于已生效值的会被忽略）。字段缺省 = 保持出厂行为。注意：明文 http 的主机必须在 APK 的明文名单里（res/xml/network_security_config.xml），所以换域名优先用 https。",
-  "rev_note": "rev6 = 线路表上云。routes 段描述每条取流线路（请求怎么发、响应里地址在哪、码率下限、画质映射），加线路/换域名/换密钥/调顺序全部在这里完成，不用发版。配套改动：specialOrder 里的 id 只需在 routes 里存在，且该线路的 sources 必须含这个源 —— 否则被过滤掉（以前是执行期才静默失败）。",
-
+  "rev_note": "rev7 = 封面策略与配额表上云。① coverSize：传给节点封面口的 size 参数（实测 qj 认 size=500 给 367KB/500×500；m2/e0 不认，恒给 90×90；m3 回 24 字节 HTML 根本不是图）—— 参数名是 size 不是 param，param 是网易云图片服务的约定、加在节点代理上完全无效。② budget：各后端的额度表，**必须与 nodes/routes 同一个 rev 一起改** ——云端加线路却没加配额，它会落到兜底档（看起来能用，直到第三方封 IP）。客户端会校验 0<minUser<usable<=200，且整份表原子应用（一条不合法就全丢）。",
   "nodes": [
-    { "id": "qj", "base": "https://api.qijieya.cn/meting/", "chart": true, "search": true },
-    { "id": "m2", "base": "https://api.injahow.cn/meting/", "chart": true },
-    { "id": "m3", "base": "https://api.moeyao.cn/meting/" },
-    { "id": "e0", "base": "https://music.3e0.cn/" }
+    {
+      "id": "qj",
+      "base": "https://api.qijieya.cn/meting/",
+      "chart": true,
+      "search": true
+    },
+    {
+      "id": "m2",
+      "base": "https://api.injahow.cn/meting/",
+      "chart": true
+    },
+    {
+      "id": "m3",
+      "base": "https://api.moeyao.cn/meting/"
+    },
+    {
+      "id": "e0",
+      "base": "https://music.3e0.cn/"
+    }
   ],
-
-  "gdSources": ["netease"],
-  "metingServers": ["netease"],
-
+  "gdSources": [
+    "netease"
+  ],
+  "metingServers": [
+    "netease"
+  ],
+  "coverSize": 500,
+  "coverNodes": [
+    "qj"
+  ],
+  "budget": {
+    "gd": {
+      "usable": 44,
+      "minUser": 10
+    },
+    "qj": {
+      "usable": 54,
+      "minUser": 20
+    },
+    "m2": {
+      "usable": 54,
+      "minUser": 20
+    },
+    "m3": {
+      "usable": 54,
+      "minUser": 20
+    },
+    "e0": {
+      "usable": 54,
+      "minUser": 20
+    },
+    "s01s": {
+      "usable": 40,
+      "minUser": 12
+    },
+    "cyapi": {
+      "usable": 40,
+      "minUser": 12
+    },
+    "kg10379": {
+      "usable": 40,
+      "minUser": 12
+    },
+    "haitangw": {
+      "usable": 40,
+      "minUser": 12
+    }
+  },
   "specialBeforeCross": true,
   "crossArtistGuard": true,
-
   "searchTxFirst": true,
   "searchRankByArtist": true,
-
   "singerCard": true,
   "singerCardMinHits": 2,
-
   "gdBase": "https://music-api.gdstudio.xyz/api.php",
-
   "cacheGen": 2,
-
   "qq": {
     "searchSong": "https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp",
     "searchSinger": "https://c.y.qq.com/soso/fcgi-bin/client_search_cp",
     "singerAlbum": "https://c.y.qq.com/v8/fcg-bin/fcg_v8_singer_album.fcg",
     "albumInfo": "https://c.y.qq.com/v8/fcg-bin/fcg_v8_album_info_cp.fcg"
   },
-
   "special": {
     "s01s": "https://tang.api.s01s.cn/music_open_api.php",
     "cyapi": "https://cyapi.top/API/qq_music.php",
@@ -42,55 +94,104 @@
     "kgKey": "6C1F-53W0-GRKI-EVFG",
     "haitangw": "https://musicserver.haitangw.cc/v1/music/resolve-url"
   },
-
   "specialOrder": {
-    "tencent": ["cyapi", "haitangw", "s01s", "kg10379"],
-    "kugou": ["haitangw", "kg10379"]
+    "tencent": [
+      "cyapi",
+      "haitangw",
+      "s01s",
+      "kg10379"
+    ],
+    "kugou": [
+      "haitangw",
+      "kg10379"
+    ]
   },
-
-  "lyricSources": ["wy", "kw"],
-
+  "lyricSources": [
+    "wy",
+    "kw"
+  ],
   "routes": [
     {
       "id": "cyapi",
-      "sources": ["tencent"],
+      "sources": [
+        "tencent"
+      ],
       "method": "GET_JSON",
       "url": "https://cyapi.top/API/qq_music.php",
       "key": "1ffdf5733f5d538760e63d7e46ba17438d9f7b9dfc18c51be1109386fd74c3a1",
-      "query": { "apikey": "{key}", "type": "json", "mid": "{id}" },
+      "query": {
+        "apikey": "{key}",
+        "type": "json",
+        "mid": "{id}"
+      },
       "shape": "TOP",
       "minKbps": 96
     },
     {
       "id": "haitangw",
-      "sources": ["tencent", "kugou"],
+      "sources": [
+        "tencent",
+        "kugou"
+      ],
       "method": "POST_JSON",
       "url": "https://musicserver.haitangw.cc/v1/music/resolve-url",
-      "body": { "source": "{src}", "rid": "{id}", "level": "{quality}" },
+      "body": {
+        "source": "{src}",
+        "rid": "{id}",
+        "level": "{quality}"
+      },
       "shape": "DATA",
-      "srcAlias": { "tencent": "tx", "kugou": "kg" },
-      "qualityMap": { "999": "320k", "320": "320k", "128": "320k" },
+      "srcAlias": {
+        "tencent": "tx",
+        "kugou": "kg"
+      },
+      "qualityMap": {
+        "999": "320k",
+        "320": "320k",
+        "128": "320k"
+      },
       "minKbps": 96
     },
     {
       "id": "kg10379",
-      "sources": ["kugou", "tencent"],
+      "sources": [
+        "kugou",
+        "tencent"
+      ],
       "method": "GET_RAW",
       "url": "http://103.79.184.97/api/music/url",
-      "headers": { "X-Card-Key": "{key}" },
+      "headers": {
+        "X-Card-Key": "{key}"
+      },
       "key": "6C1F-53W0-GRKI-EVFG",
-      "query": { "source": "{src}", "songId": "{id}", "quality": "{quality}", "key": "{key}" },
+      "query": {
+        "source": "{src}",
+        "songId": "{id}",
+        "quality": "{quality}",
+        "key": "{key}"
+      },
       "shape": "TOP_OR_REDIRECT",
-      "srcAlias": { "tencent": "tx", "kugou": "kg" },
-      "qualityMap": { "999": "320k", "320": "320k", "128": "128k" },
+      "srcAlias": {
+        "tencent": "tx",
+        "kugou": "kg"
+      },
+      "qualityMap": {
+        "999": "320k",
+        "320": "320k",
+        "128": "128k"
+      },
       "minKbps": 128
     },
     {
       "id": "s01s",
-      "sources": ["tencent"],
+      "sources": [
+        "tencent"
+      ],
       "method": "GET_JSON",
       "url": "https://tang.api.s01s.cn/music_open_api.php",
-      "query": { "mid": "{id}" },
+      "query": {
+        "mid": "{id}"
+      },
       "shape": "BY_TIER",
       "minKbps": 96
     }
