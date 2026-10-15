@@ -1,7 +1,8 @@
 {
-  "rev": 4,
-  "updated": "2026-10-08",
+  "rev": 5,
+  "updated": "2026-10-15",
   "note": "Ivan Music 云端调参。改完直接生效，不用发版。rev 必须递增（小于等于已生效值的会被忽略）。字段缺省 = 保持出厂行为。注意：明文 http 的主机必须在 APK 的明文名单里（res/xml/network_security_config.xml），所以换域名优先用 https。",
+  "rev_note": "rev5 = 2026-10-15 三路并发实测后的调参（证据 audit/_sources/ 与 audit/DEVLOG [33]）。两处：① QQ 首选从 s01s 换成 cyapi（s01s 已死：HTTP 200 且元数据全对，但播放地址 hq/sq 全是空串，每首歌先白等 0.9s 再失败；cyapi 实测 0.17s 且给完整 3.28MB）；② 酷狗首选从 kg10379 换成 haitangw（实测 0.50s 且 3/3 稳定，kg10379 有 4.6s 抖动与一次 20s 超时）。s01s 保留在链尾而非删除 —— 它一旦恢复还能自动接回去。歌词源顺序显式写出（本就等于出厂值，写明是为了让下一个人不必去翻代码）。",
 
   "nodes": [
     { "id": "qj", "base": "https://api.qijieya.cn/meting/", "chart": true, "search": true },
@@ -40,5 +41,12 @@
     "kg": "http://103.79.184.97/api/music/url",
     "kgKey": "6C1F-53W0-GRKI-EVFG",
     "haitangw": "https://musicserver.haitangw.cc/v1/music/resolve-url"
-  }
+  },
+
+  "specialOrder": {
+    "tencent": ["cyapi", "haitangw", "s01s"],
+    "kugou": ["haitangw", "kg10379"]
+  },
+
+  "lyricSources": ["wy", "kw"]
 }
